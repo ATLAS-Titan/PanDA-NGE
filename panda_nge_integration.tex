@@ -1,0 +1,129 @@
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
+
+\input{head}
+\input{include}
+
+\usepackage{listings}
+\usepackage{comment}
+
+
+% -----------------------------------------------------------------------------
+% BEGIN DOCUMENT
+% -----------------------------------------------------------------------------
+\begin{document}
+
+\title{PanDA and NGE Integration}
+
+
+\author{
+\IEEEauthorblockN{Authors Name/s per 1st Affiliation (Author)}
+\IEEEauthorblockA{line 1 (of Affiliation): dept.\ name of organization\\
+    line 2: name of organization, acronyms acceptable\\
+    line 3: City, Country\\
+    line 4: Email: name@xyz.com}
+\and
+\IEEEauthorblockN{Authors Name/s per 2nd Affiliation (Author)}
+\IEEEauthorblockA{line 1 (of Affiliation): dept.\ name of organization\\
+    line 2: name of organization, acronyms acceptable\\
+    line 3: City, Country\\
+    line 4: Email: name@xyz.com}
+}
+
+% make the title area
+\maketitle
+
+% ----------------------------------------------------------------------------
+% ABSTRACT
+% ----------------------------------------------------------------------------
+\begin{abstract}
+TBD\@.
+\end{abstract}
+
+\begin{IEEEkeywords}
+TBD\@.
+\end{IEEEkeywords}
+
+% ----------------------------------------------------------------------------
+% I - INTRODUCTION
+% ----------------------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+
+% ----------------------------------------------------------------------------
+% II - RELATED WORK
+% ----------------------------------------------------------------------------
+\section{Related Work}
+\label{sec:related}
+
+
+% ----------------------------------------------------------------------------
+% III - ARCHITECTURE
+% ----------------------------------------------------------------------------
+\section{Architecture}
+\label{sec:panda_overview}
+
+\begin{figure}
+  \includegraphics[width=\columnwidth]{figures/panda_nge.pdf}
+  \caption{Architecture of the system integrating PanDA and NGE.}
+\label{fig:atlas_workflow}
+\end{figure}
+
+\begin{itemize}
+
+    \item General description: The next generation executer (NGE) is
+    encapsulated within a daemon executed on a data transfer node (DTN) on
+    Titan. The NGE daemon exposes two interfaces: one for job submission, the
+    other for providing information about resources. The NGE behaves like a
+    resource broker, offering information about the resources that are currently
+    available and those that can become available.
+
+    \item Interfaces: Jobs are described in terms of requirements for their
+    execution and resources are described abstracting from the specifics of the
+    machines on which these resources are acquired. The definition of a job
+    description and of a resource description protocol are among the
+    deliverables of this paper.
+
+    \item Database: information about the resources (abstracted in terms of
+    pilots), the tasks submitted for execution (abstracted in terms of compute
+    units), and of the data required by each task (abstracted in terms of data
+    units) are stored in the NGE DB\@. The DB is the only stateful element of the NGE architecture and, as such, will have to be fault-tolerant and redundant.
+
+\end{itemize}
+
+% ----------------------------------------------------------------------------
+% IV - EVALUATION
+% ----------------------------------------------------------------------------
+\section{Evaluation}
+\label{sec:evaluation}
+
+
+% ----------------------------------------------------------------------------
+% V - DISCUSSION
+% ----------------------------------------------------------------------------
+\section{Discussion}
+\label{sec:discussion}
+
+
+% ----------------------------------------------------------------------------
+% VI - CONCLUSION
+% ----------------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+
+% ----------------------------------------------------------------------------
+% ACKNOWLEDGEMENTS AND CONTRIBUTIONS
+% ----------------------------------------------------------------------------
+\section{Acknowledgements and Contributions}
+\label{sec:ack}
+
+
+% ----------------------------------------------------------------------------
+% REFERENCES
+% ----------------------------------------------------------------------------
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+% that's all folks
+\end{document}
