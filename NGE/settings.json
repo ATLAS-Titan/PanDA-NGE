@@ -1,0 +1,6 @@
+{
+        "output_path" : "/lustre/atlas/scratch/aleang9/csc108",
+        "gromacs_path"  : "/lustre/atlas/world-shared/csc230/gromacs/bin/",
+        "unit_folder_label" : "",
+        "launcher_file"   : "launcher.sh"
+}
