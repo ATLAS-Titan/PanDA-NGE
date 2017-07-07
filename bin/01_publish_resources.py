@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 
 import os
-import pymongo
 import radical.utils as ru
 
-dburl = 'mongodb://localhost/nge_resources/am'
+dburl = 'mongodb://144.76.72.175/am'
 pwd   = os.path.dirname(__file__)
 
 if __name__ == '__main__':
