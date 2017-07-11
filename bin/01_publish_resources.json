@@ -1,41 +1,43 @@
 
-{
-    "pilot": [
-        {
-            "uid": "pilot.0000", 
-            "description": {
-                "access_schema": null, 
-                "candidate_hosts": null, 
-                "cleanup": null, 
-                "cores": 64, 
-                "exit_on_error": true, 
-                "gpus": 0, 
-                "memory": null, 
-                "project": "d137", 
-                "queue": "short", 
-                "resource": "epsrc.archer", 
-                "runtime": 15, 
-                "sandbox": null
-            }, 
-            "pilot_sandbox": "sftp://login.archer.ac.uk/work/d137/d137/merzky3/radical.pilot.sandbox/rp.session.thinkie.merzky.017338.0009/pilot.0000/", 
-            "resource": "ornl.titan", 
-            "resource_details": null, 
-            "resource_sandbox": "sftp://login.archer.ac.uk/work/d137/d137/merzky3/radical.pilot.sandbox", 
-            "session": "rp.session.thinkie.merzky.017338.0009", 
-            "state": "PMGR_LAUNCHING", 
-            "states": [
-                "NEW", 
-                "PMGR_LAUNCHING_PENDING", 
-                "PMGR_LAUNCHING"
-            ], 
-            "stderr": null, 
-            "stdout": null, 
-            "uid": "pilot.0000"
-        }
-    ], 
-    "session":   { "uid": "rp.session.thinkie.merzky.017338.0009" }, 
-    "pmgr"   : [ { "uid": "pmgr.0000" } ], 
-    "umgr"   : [ { "uid": "umgr.0000" } ], 
-    "unit"   : [ { "uid": "unit.0000" } ]
-}
+[
+  {
+              "uid": "pilot.0000", 
+              "description": {
+                  "access_schema": null, 
+                  "candidate_hosts": null, 
+                  "cleanup": null, 
+                  "cores": 64, 
+                  "exit_on_error": true, 
+                  "gpus": 0, 
+                  "memory": null, 
+                  "project": "d137", 
+                  "queue": "short", 
+                  "resource": "epsrc.archer", 
+                  "runtime": 15, 
+                  "sandbox": null
+              }, 
+              "pilot_sandbox": "sftp://login.archer.ac.uk/work/d137/d137/merzky3/radical.pilot.sandbox/rp.session.thinkie.merzky.017338.0009/pilot.0000/", 
+              "resource": "ornl.titan", 
+              "resource_details": null, 
+              "resource_sandbox": "sftp://login.archer.ac.uk/work/d137/d137/merzky3/radical.pilot.sandbox", 
+              "session": "rp.session.thinkie.merzky.017338.0009", 
+              "state": "PMGR_LAUNCHING", 
+              "states": [
+                  "NEW", 
+                  "PMGR_LAUNCHING_PENDING", 
+                  "PMGR_LAUNCHING"
+              ], 
+              "stderr": null, 
+              "stdout": null, 
+              "type": "pilot",
+              "uid": "pilot.0000",
+              "_id": "pilot.0000"
+  },
+  
+  { 
+      "type" : "session",
+      "uid": "rp.session.thinkie.merzky.017338.0009",
+      "_id": "rp.session.thinkie.merzky.017338.0009" 
+  }
+]
 

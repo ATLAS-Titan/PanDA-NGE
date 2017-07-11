@@ -14,8 +14,14 @@ if __name__ == '__main__':
     coll  = db[sid]
     json  = ru.read_json('%s/01_publish_resources.json' % pwd)
 
-    json['session']['uid'] = sid
-    coll.insert(json)
+    print 'create session %s' % sid
+
+    for doc in json:
+        if doc['type'] == 'session':
+            doc['uid'] = sid
+            doc['_id'] = sid
+        coll.insert(doc)
+        print 'insert %s %s' % (doc['type'], doc['uid'])
     print 'inserted session %s' % sid
 
 
