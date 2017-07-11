@@ -10,7 +10,12 @@ if __name__ == '__main__':
 
     mongo, db, _, _, _ = ru.mongodb_connect(str(dburl))
 
-    coll  = db['rp.session.thinkie.merzky.017354.0030']
-    coll.insert(ru.read_json('%s/01_publish_resources.json' % pwd))
+    sid   = ru.generate_id('rp.session',  mode=ru.ID_PRIVATE)
+    coll  = db[sid]
+    json  = ru.read_json('%s/01_publish_resources.json' % pwd)
+
+    json['session']['uid'] = sid
+    coll.insert(json)
+    print 'inserted session %s' % sid
 
 
